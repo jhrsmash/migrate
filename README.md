@@ -104,11 +104,6 @@ Example:
 ```
 000001_create_users_table.up.sql
 000001_create_users_table.down.sql
-000002_add_email_index.up.sql
-000002_add_email_index.down.sql
 ```
 
-> **Tip:** I keep migrations in `db/migrations/` rather than `migrations/` to group all database-related files together (`db/migrations/`, `db/seeds/`, `db/schema.sql`).
-
-## Development
-
+> **Note:** I prefer sequential integer versioning (e.g. `000001`, `000002`) over timestamps — it makes the migration order immediately obvious when listing files.
