@@ -7,6 +7,8 @@ A fork of [golang-migrate/migrate](https://github.com/golang-migrate/migrate) �
 [![Go Report Card](https://goreportcard.com/badge/github.com/your-org/migrate)](https://goreportcard.com/report/github.com/your-org/migrate)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
+> **Personal fork** — I use this primarily with PostgreSQL and the `file` source driver. Notes and tweaks reflect that use case.
+
 ## Features
 
 - **Stateless** — no state is stored in your database (unless you use the advisory lock feature)
@@ -106,43 +108,7 @@ Example:
 000002_add_email_index.down.sql
 ```
 
+> **Tip:** I keep migrations in `db/migrations/` rather than `migrations/` to group all database-related files together (`db/migrations/`, `db/seeds/`, `db/schema.sql`).
+
 ## Development
 
-### Prerequisites
-
-- Go 1.21+
-- Docker (for running integration tests)
-
-### Running Tests
-
-```bash
-# Unit tests
-go test ./...
-
-# Integration tests (requires Docker)
-make test-integration
-```
-
-### Building
-
-```bash
-make build
-```
-
-## Contributing
-
-Contributions are welcome! Please open an issue or submit a pull request.
-
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feat/my-feature`)
-3. Commit your changes (`git commit -m 'feat: add my feature'`)
-4. Push to the branch (`git push origin feat/my-feature`)
-5. Open a Pull Request
-
-## License
-
-This project is licensed under the MIT License — see the [LICENSE](LICENSE) file for details.
-
-## Acknowledgements
-
-This project is a fork of [golang-migrate/migrate](https://github.com/golang-migrate/migrate). All credit for the original implementation goes to the original authors and contributors.
