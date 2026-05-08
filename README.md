@@ -106,4 +106,4 @@ Example:
 000001_create_users_table.down.sql
 ```
 
-> **Note:** I prefer sequential integer versioning (e.g. `000001`, `000002`) over timestamps — it makes the migration order immediately obvious when listing files.
+> **Note:** I prefer sequential integer versioning (e.g. `000001`, `000002`) over timestamps — easier to read and reason about in small projects.
