@@ -106,4 +106,5 @@ Example:
 000001_create_users_table.down.sql
 ```
 
-> **Note:** I prefer sequential integer versioning (`-seq` flag) over timestamps — it keeps migration filenames short and makes ordering unambiguous at a glance.
+> **Note:** I prefer sequential integer versioning (using `-seq` flag) over timestamps. It keeps migration filenames
+> predictable and easier to reason about when reviewing PRs.
